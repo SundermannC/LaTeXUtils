@@ -1,0 +1,18 @@
+\usepackage{listings}
+
+\lstdefinelanguage{uvlsimple}{
+	keywords = {alternative,or,optional,mandatory,features,constraints},
+    % otherkeywords={=>,|,&},
+	morecomment=[l]{//},
+	commentstyle=\itshape\color{purple!40!black},
+    keywordstyle=\ttfamily\color{magenta},
+    tabsize=4,
+    columns=fullflexible
+}
+
+\lstdefinelanguage{dimacs}{
+    keywords = {p,cnf,c},
+    keywordstyle=\ttfamily\color{magenta},
+    columns=fullflexible,
+    tabsize=4
+}

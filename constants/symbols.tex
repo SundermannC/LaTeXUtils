@@ -1,0 +1,11 @@
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\cmarkcolored}{\textcolor{green}{\ding{51}}}%
+\newcommand{\xmarkcolored}{\textcolor{red}{\ding{55}}}%
+
+% Research Question Layout
+\usepackage{enumitem}
+\usepackage{calc}
+\newcommand*{\researchquestion}[1]{\item[\textbf{RQ#1}]}
+\newcommand*{\researchquestionlabelwidthof}[1]{\labelsep+\widthof{\textbf{RQ#1}}}

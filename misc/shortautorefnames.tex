@@ -6,16 +6,27 @@
 	\fi	
 }
 
-\latexutilautorefoverride{figureautorefname}{Fig.}
-\latexutilautorefoverride{equationautorefname}{Eq.}
-\latexutilautorefoverride{sectionautorefname}{Sec.}
-\latexutilautorefoverride{subsectionautorefname}{Sec.}
-\latexutilautorefoverride{subsubsectionautorefname}{Sec.}
-\latexutilautorefoverride{definitionautorefname}{Def.}
-\latexutilautorefoverride{footnoteautorefname}{Footnote}
-\latexutilautorefoverride{algorithmautorefname}{Alg.}
+% \latexutilautorefoverride{figureautorefname}{Fig.}
+% \latexutilautorefoverride{equationautorefname}{Eq.}
+% \latexutilautorefoverride{sectionautorefname}{Sec.}
+% \latexutilautorefoverride{subsectionautorefname}{Sec.}
+% \latexutilautorefoverride{subsubsectionautorefname}{Sec.}
+% \latexutilautorefoverride{definitionautorefname}{Def.}
+% \latexutilautorefoverride{footnoteautorefname}{Footnote}
+% \latexutilautorefoverride{algorithmautorefname}{Alg.}
 
-\makeatletter
-\patchcmd{\ALG@step}{\addtocounter{ALG@line}{1}}{\refstepcounter{ALG@line}}{}{}
-\newcommand{\ALG@lineautorefname}{Line}
-\makeatother
+\latexutilautorefoverride{figureautorefname}{Figure}
+\latexutilautorefoverride{equationautorefname}{Equation}
+\latexutilautorefoverride{sectionautorefname}{Section}
+\latexutilautorefoverride{subsectionautorefname}{Section}
+\latexutilautorefoverride{subsubsectionautorefname}{Section}
+\latexutilautorefoverride{definitionautorefname}{Definition}
+\latexutilautorefoverride{footnoteautorefname}{Footnote}
+\latexutilautorefoverride{algorithmautorefname}{Algorithm}
+
+
+
+% \makeatletter
+% \patchcmd{\ALG@step}{\addtocounter{ALG@line}{1}}{\refstepcounter{ALG@line}}{}{}
+% \newcommand{\ALG@lineautorefname}{Line}
+% \makeatother
