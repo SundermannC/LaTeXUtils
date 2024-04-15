@@ -1,55 +1,64 @@
+% \usepackage{ifthen}
+\newboolean{email}
+\setboolean{email}{false}
+\newboolean{city}
+\setboolean{city}{false}
+
 \newcommand{\affchicosundermann}{
-\author{Chico Sundermann}
-\affiliation{%
-	\institution{University of Ulm}
-	\city{Ulm}
-	\country{Germany}}
-\email{chico.sundermann@uni-ulm.de}
+	\author{Chico Sundermann}
+	\orcid{0000-0002-5239-3307}
+	\affiliation{%
+		\institution{University of Ulm}
+		\ifthenelse{\boolean{city}}{\city{Ulm}}{}
+		\country{Germany}}
+	\ifthenelse{\boolean{email}}{\email{chico.sundermann@uni-ulm.de}}{}
 }
 
 \newcommand{\affthomasthuem}{
 	\author{Thomas Thüm}
+	\orcid{0000-0001-8069-9584}
 	\affiliation{%
-		\institution{University of Ulm}
-		\city{Ulm}
+		\institution{Paderborn University}
+		\ifthenelse{\boolean{city}}{\city{Paderborn}}{}
 		\country{Germany}}
-	\email{thomas.thuem@uni-ulm.de}
+	\ifthenelse{\boolean{email}}{\email{thomas.thuem@uni-ulm.de}}
 }
 
 \newcommand{\affheikoraab}{
 	\author{Heiko Raab}
 	\affiliation{%
 		\institution{University of Ulm}
-		\city{Ulm}
+		\ifthenelse{\boolean{city}}{\city{Ulm}}{}
 		\country{Germany}}
-	\email{heiko.raab@uni-ulm.de}
+	\ifthenelse{\boolean{email}}{\email{heiko.raab@uni-ulm.de}}
 }
 
 \newcommand{\affsebastiankrieter}{
 	\author{Sebastian Krieter}
+	\orcid{0000-0001-7077-7091}
 	\affiliation{%
-		\institution{University of Ulm}
-		\city{Ulm}
+		\institution{Paderborn University}
+		\ifthenelse{\boolean{city}}{\city{Padeborn}}{}
 		\country{Germany}}
-	\email{sebastian.krieter@uni-ulm.de}
+	\ifthenelse{\boolean{email}}{\email{sebastian.krieter@uni-ulm.de}}
 }
 
 \newcommand{\afftobiashess}{
 	\author{Tobias Heß}
 	\affiliation{%
 		\institution{University of Ulm}
-		\city{Ulm}
+		\ifthenelse{\boolean{city}}{\city{Ulm}}{}
 		\country{Germany}}
-	\email{tobias.hess@uni-ulm.de}
+	\ifthenelse{\boolean{email}}{\email{tobias.hess@uni-ulm.de}}
 }
 
 \newcommand{\affeliaskuiter}{
 	\author{Elias Kuiter}
 	\affiliation{%
-		\institution{Otto-von-Guericke-University}
-		\city{Magdeburg}
+		\institution{University of Magdeburg}
+		\ifthenelse{\boolean{city}}{\city{Madgeburg}}{}
 		\country{Germany}}
-	\email{kuiter@ovgu.de}
+		\ifthenelse{\boolean{email}}{\email{kuiter@ovgu.de}}
 
 }
 
@@ -57,8 +66,8 @@
 	\author{Ina Schaefer}
 	\affiliation{%
 		\institution{Karlsruhe Institute of Technology}
-		\city{Karlsruhe}
+		\ifthenelse{\boolean{city}}{\city{Karlsruhe}}{}
 		\country{Germany}
 	}
-	\email{ina.schaefer@kit.edu}
+	\ifthenelse{\boolean{email}}{\email{ina.schaefer@kit.edu}}
 }
