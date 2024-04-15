@@ -1,0 +1,12 @@
+\usetikzlibrary{arrows.meta,shapes,positioning}
+
+\tikzset{
+  dag/.style={
+    nodes={draw, circle, minimum size = .1cm, inner sep=2pt},
+    -{Stealth[length=1mm]},
+	level 1/.style={sibling distance=20mm,level distance=0.5cm},
+	level 2/.style={sibling distance=10mm,level distance=0.5cm},
+	level 3/.style={sibling distance=10mm,level distance=0.5cm}
+  },
+  font={\tiny\selectfont}
+}

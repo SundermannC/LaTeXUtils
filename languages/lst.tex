@@ -1,7 +1,7 @@
 \usepackage{listings}
 
 \lstdefinelanguage{uvlsimple}{
-	keywords = {alternative,or,optional,mandatory,features,constraints},
+	keywords = {alternative,or,optional,mandatory,features,constraints,include},
     % otherkeywords={=>,|,&},
 	morecomment=[l]{//},
 	commentstyle=\itshape\color{purple!40!black},
@@ -9,6 +9,17 @@
     tabsize=4,
     columns=fullflexible
 }
+
+\lstdefinelanguage{uvlfull}{
+	keywords = {alternative,or,optional,mandatory,features,constraints, cardinality, Real, Boolean, Integer, String, imports, as,include},
+    otherkeywords={=>,|,&,[,], ==, >, <, \{,\}},
+	morecomment=[l]{//},
+	commentstyle=\itshape\color{purple!40!black},
+    keywordstyle=\ttfamily\color{magenta},
+    tabsize=4,
+    columns=fullflexible
+}
+
 
 \lstdefinelanguage{dimacs}{
     keywords = {p,cnf,c},

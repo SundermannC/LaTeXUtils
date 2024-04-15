@@ -1,6 +1,11 @@
  \usepackage{ifthen}
  \newboolean{final}
  \setboolean{final}{false}
+
+\newcommand{\changed}[1]{#1}
+% \renewcommand{\changed}[1]{{\color{blue}#1}}
+\newcommand{\reviewernote}[1]{\textcolor{blue}{For reviewers: #1}}
+
 \ifthenelse{\boolean{final}}{
 	\newcommand{\todo}[1]{}
 	\newcommand{\todots}{}
@@ -8,7 +13,7 @@
 	\newcommand{\review}[1]{}
 	\newcommand{\questionForReview}[1]{}
 	\newcommand{\saveSpaceHere}[1]{}
-	\newcommand{\changed}[1]{#1}
+
 }{
 	\newcommand{\todo}[1]{{\color{red}\textit{[#1]}}}
 	\newcommand{\todots}{\todo{\ldots}}
@@ -16,5 +21,5 @@
 	\newcommand{\review}[1]{\textcolor{orange}{[Review required: #1]}}
 	\newcommand{\questionForReview}[1]{\review{Question for Review: #1}}
 	\newcommand{\saveSpaceHere}[1]{\hint{Save space here: #1}}
-	\newcommand{\changed}[1]{{\color{blue}#1}}
+
 }

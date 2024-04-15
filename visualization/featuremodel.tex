@@ -78,3 +78,33 @@
 	},
 }
 %-------------------------------------------------------------------------------
+
+% Example
+% \begin{figure}
+% 	\begin{forest}
+% 		featureDiagram
+% 		[Vending Machine,concrete[Transport,concrete,mandatory[Drop,concrete,alternative][Elevator,concrete]][Items,concrete,mandatory[Ice Cream,concrete,or][Chocolate,concrete][Drinks,concrete]][Cooling,concrete,optional]]
+% 		\matrix [anchor=north west] at (current bounding box.north east) {
+% 			\node [placeholder] {}; \\
+% 		};
+% 		\matrix [draw=drawColor,anchor=north west] at (current bounding box.north east) {
+% 			\node [label=center:\underline{Legend:}] {};        \\
+% 			\node [concrete,label=right:Feature] {};              \\
+% 			\node [mandatory,label=right:Mandatory] {};           \\
+% 			\node [optional,label=right:Optional] {};             \\
+% 			\filldraw[drawColor] (0.1,0) - +(-0,-0.2) - +(0.2,-0.2)- +(0.1,0);
+% 			\draw[drawColor] (0.1,0) -- +(-0.2, -0.4);
+% 			\draw[drawColor] (0.1,0) -- +(0.2,-0.4);
+% 			\fill[drawColor] (0,-0.2) arc (240:300:0.2);
+% 			\node [or,label=right:Or Group] {};                   \\			
+% 			\draw[drawColor] (0.1,0) -- +(-0.2, -0.4);
+% 			\draw[drawColor] (0.1,0) -- +(0.2,-0.4);
+% 			\draw[drawColor] (0,-0.2) arc (240:300:0.2);
+% 			\node [alternative,label=right:Alternative Group] {}; \\};
+% 		\matrix [anchor=north, align=center] at (0,-2) {
+% 			\node {Drop $\Rightarrow \neg$ Drinks $\land$ $\neg$ Ice Cream}; \\
+% 			\node {(Ice Cream $\vee$ Lemonade) $\Rightarrow$ Cooling};\\};
+% 	\end{forest}
+% 	\caption{Feature Model Example}
+% 	\label{fig:motivation:pc}
+% \end{figure}
