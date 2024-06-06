@@ -1,12 +1,19 @@
  \usepackage{ifthen}
  \newboolean{final}
  \setboolean{final}{false}
-
+\newboolean{doubleblind}
+\setboolean{doubleblind}{true}
 \newcommand{\changed}[1]{#1}
 % \renewcommand{\changed}[1]{{\color{blue}#1}}
 \newcommand{\anonymize}[1]{\textcolor{blue}{text removed for peer review}}
 % \renewcommand{\anonymize}[1]{#1}
 
+\ifthenelse{\boolean{doubleblind}}{
+ \newcommand{\doubleblind}[2]{#2}
+}{
+ \newcommand{\doubleblind}[2]{#1}
+ 
+}
 
 \ifthenelse{\boolean{final}}{
 	\newcommand{\todo}[1]{}
