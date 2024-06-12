@@ -71,3 +71,14 @@
 	}
 	\ifthenelse{\boolean{email}}{\email{ina.schaefer@kit.edu}}
 }
+
+\newcommand{\affrahelsundermann}{
+	\author{Rahel Sundermann}
+	\orcid{0009-0000-3135-2680}
+	\affiliation{%
+		\institution{University of Ulm}
+		\ifthenelse{\boolean{city}}{\city{Ulm}}{}
+		\country{Germany}}
+	\ifthenelse{\boolean{email}}{\email{rahel.sundermann@uni-ulm.de}}{}
+}
+
