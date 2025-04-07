@@ -10,11 +10,11 @@
     stringstyle=\color{eclipseKeywords}, % style of strings
     numbers=left,
     numberstyle=\scriptsize,
+    xleftmargin=0.6cm,
     stepnumber=1,
     numbersep=8pt,
     showstringspaces=false,
     breaklines=true,
-    frame=lines,
     string=[s]{"}{"},
     comment=[l]{:\ "},
     morecomment=[l]{:"},
@@ -37,17 +37,17 @@
     % otherkeywords={=>,|,&},
 	morecomment=[l]{//},
 	commentstyle=\itshape\color{purple!40!black},
-    keywordstyle=\ttfamily\color{magenta},
+    keywordstyle=\ttfamily\color{eclipseKeywords},
     tabsize=4,
     columns=fullflexible
 }
 
 \lstdefinelanguage{uvlfull}{
 	keywords = {alternative,or,optional,mandatory,features,constraints, cardinality, Real, Boolean, Integer, String, imports, as,include},
-    otherkeywords={=>,|,&,[,], ==, >, <, \{,\}},
+    otherkeywords = {|,&,[,], ==, \{,\}, =>, <},
 	morecomment=[l]{//},
 	commentstyle=\itshape\color{purple!40!black},
-    keywordstyle=\ttfamily\color{magenta},
+    keywordstyle=\ttfamily\color{eclipseKeywords},
     tabsize=4,
     columns=fullflexible
 }
@@ -55,7 +55,7 @@
 
 \lstdefinelanguage{dimacs}{
     keywords = {p,cnf,c},
-    keywordstyle=\ttfamily\color{magenta},
+    keywordstyle=\ttfamily\color{eclipseKeywords},
     columns=fullflexible,
     tabsize=4
 }

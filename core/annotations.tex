@@ -4,15 +4,15 @@
 \newboolean{doubleblind}
 \setboolean{doubleblind}{false}
 \newcommand{\changed}[1]{#1}
-% \renewcommand{\changed}[1]{{\color{blue}#1}}
-\newcommand{\anonymize}[1]{\textcolor{blue}{text removed for peer review}}
-% \renewcommand{\anonymize}[1]{#1}
+% \renewcommand{\changed}[1]{\textcolor{blue}{#1}}
+
 
 \ifthenelse{\boolean{doubleblind}}{
  \newcommand{\doubleblind}[2]{#2}
+ \newcommand{\anonymize}[1]{\textcolor{blue}{text removed for peer review}}
 }{
  \newcommand{\doubleblind}[2]{#1}
- 
+ \newcommand{\anonymize}[1]{#1}
 }
 
 \ifthenelse{\boolean{final}}{
@@ -20,14 +20,16 @@
 	\newcommand{\todots}{}
 	\newcommand{\hint}[1]{}
 	\newcommand{\review}[1]{}
+	\newcommand{\optional}[1]{}
 	\newcommand{\questionForReview}[1]{}
 	\newcommand{\saveSpaceHere}[1]{}
 
 }{
-	\newcommand{\todo}[1]{{\color{red}\textit{[#1]}}}
+	\newcommand{\todo}[1]{{\color{red}\textbf{[#1]}}}
 	\newcommand{\todots}{\todo{\ldots}}
 	\newcommand{\hint}[1]{{\color{hint}\textit{[#1]}}}
 	\newcommand{\review}[1]{\textcolor{orange}{[Review required: #1]}}
+	\newcommand{\optional}[1]{\textcolor{blue}{[Possibly relevant content: #1]}}
 	\newcommand{\questionForReview}[1]{\review{Question for Review: #1}}
 	\newcommand{\saveSpaceHere}[1]{\hint{Save space here: #1}}
 
